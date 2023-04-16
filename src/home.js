@@ -42,6 +42,15 @@ function createHomePage() {
   const profileText = document.createTextNode('Profile');
   const moreText = document.createTextNode('More');
   const tweetText = document.createTextNode('Tweet');
+  home.append(homeText);
+  explore.append(exploreText);
+  notifications.append(notificationsText);
+  messages.append(messagesText);
+  bookmarks.append(bookmarksText);
+  twitterBlue.append(twitterBlueText);
+  profile.append(profileText);
+  more.append(moreText);
+  tweet.append(tweetText);
   column1.append(home);
   column1.append(explore);
   column1.append(notifications);
