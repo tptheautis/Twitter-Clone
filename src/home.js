@@ -23,7 +23,48 @@ function createHomePage() {
   const twitterBlue = document.createElement('div');
   const profile = document.createElement('div');
   const more = document.createElement('div');
-  const tweet = document.createElement('tweet');
+  const tweet = document.createElement('div');
+
+  // Left Sidebar Images
+  const twitterLogo = document.createElement('img');
+  twitterLogo.classList.add('twitterLogo');
+  twitterLogo.src = '../src/assets/twitter.png';
+  column1.append(twitterLogo);
+  const homeLogo = document.createElement('img');
+  homeLogo.classList.add('homeLogo');
+  homeLogo.src = '../src/assets/home.png';
+  home.append(homeLogo);
+  const exploreLogo = document.createElement('img');
+  exploreLogo.classList.add('exploreLogo');
+  exploreLogo.src = '../src/assets/hashtag.png';
+  explore.append(exploreLogo);
+  const notificationsLogo = document.createElement('img');
+  notificationsLogo.classList.add('notificationsLogo');
+  notificationsLogo.src = '../src/assets/bell.png';
+  notifications.append(notificationsLogo);
+  const messagesLogo = document.createElement('img');
+  messagesLogo.classList.add('messagesLogo');
+  messagesLogo.src = '../src/assets/mail.png';
+  messages.append(messagesLogo);
+  const bookmarksLogo = document.createElement('img');
+  bookmarksLogo.classList.add('bookmarksLogo');
+  bookmarksLogo.src = '../src/assets/bookmark.png';
+  bookmarks.append(bookmarksLogo);
+  const twitterBlueLogo = document.createElement('img');
+  twitterBlueLogo.classList.add('twitterBlueLogo');
+  twitterBlueLogo.src = '../src/assets/twitterBlue.png';
+  twitterBlue.append(twitterBlueLogo);
+  const profileLogo = document.createElement('img');
+  profileLogo.classList.add('profileLogo');
+  profileLogo.src = '../src/assets/profile.png';
+  profile.append(profileLogo);
+  const moreLogo = document.createElement('img');
+  moreLogo.classList.add('moreLogo');
+  moreLogo.src = '../src/assets/more.png';
+  more.append(moreLogo);
+
+
+  // Left Sidebar Classes
   home.classList.add('home');
   explore.classList.add('explore');
   notifications.classList.add('notifications');
@@ -33,6 +74,8 @@ function createHomePage() {
   profile.classList.add('profile');
   more.classList.add('more');
   tweet.classList.add('tweet');
+
+  // Left Sidebar Text
   const homeText = document.createTextNode('Home');
   const exploreText = document.createTextNode('Explore');
   const notificationsText = document.createTextNode('Notifications');
@@ -42,6 +85,8 @@ function createHomePage() {
   const profileText = document.createTextNode('Profile');
   const moreText = document.createTextNode('More');
   const tweetText = document.createTextNode('Tweet');
+
+  // Left Sidebar appending
   home.append(homeText);
   explore.append(exploreText);
   notifications.append(notificationsText);
