@@ -1,37 +1,45 @@
+body {
+  margin: 0;
+}
+
 .mainContainer {
   display: flex;
   flex-direction: row;
   height: 100vh;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid #F5F8FA;;
 }
 
 .column1 {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  margin-top: 30px;
+  gap: 35px;
   height: 100vh;
   flex: 1;
-  border: 1px solid black;
+  border: 1px solid #F5F8FA;
 }
 
 .column2 {
   display: flex;
   height: 100vh;
   width: 33%;
-  border: 1px solid black;
+  border: 1px solid #F5F8FA;
 }
 
 .column3 {
   display: flex;
   height: 100vh;
   flex: 1;
-  border: 1px solid black;
+  border: 1px solid #F5F8FA;
 }
 
-.home, .explore, .notifications, .messages, .bookmarks, .twitterBlue, .profile, .more, .tweet {
+.twitterLogo, .home, .explore, .notifications, .messages, .bookmarks, .twitterBlue, .profile, .more, .tweet {
   display: flex;
-  font-size: 30px;
+  margin-left: 400px;
+  font-weight: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
   gap: 30px;
 }
 
