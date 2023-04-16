@@ -33,6 +33,15 @@ function createHomePage() {
   profile.classList.add('profile');
   more.classList.add('more');
   tweet.classList.add('tweet');
+  column1.append(home);
+  column1.append(explore);
+  column1.append(notifications);
+  column1.append(messages);
+  column1.append(bookmarks);
+  column1.append(twitterBlue);
+  column1.append(profile);
+  column1.append(more);
+  column1.append(tweet);
 }
 
 export default createHomePage();
