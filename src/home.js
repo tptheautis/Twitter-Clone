@@ -33,6 +33,15 @@ function createHomePage() {
   profile.classList.add('profile');
   more.classList.add('more');
   tweet.classList.add('tweet');
+  const homeText = document.createTextNode('Home');
+  const exploreText = document.createTextNode('Explore');
+  const notificationsText = document.createTextNode('Notifications');
+  const messagesText = document.createTextNode('Messages');
+  const bookmarksText = document.createTextNode('Bookmarks');
+  const twitterBlueText = document.createTextNode('Twitter Blue');
+  const profileText = document.createTextNode('Profile');
+  const moreText = document.createTextNode('More');
+  const tweetText = document.createTextNode('Tweet');
   column1.append(home);
   column1.append(explore);
   column1.append(notifications);
