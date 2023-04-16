@@ -24,6 +24,15 @@ function createHomePage() {
   const profile = document.createElement('div');
   const more = document.createElement('div');
   const tweet = document.createElement('tweet');
+  home.classList.add('home');
+  explore.classList.add('explore');
+  notifications.classList.add('notifications');
+  messages.classList.add('messages');
+  bookmarks.classList.add('bookmarks');
+  twitterBlue.classList.add('twitterBlue');
+  profile.classList.add('profile');
+  more.classList.add('more');
+  tweet.classList.add('tweet');
 }
 
 export default createHomePage();
