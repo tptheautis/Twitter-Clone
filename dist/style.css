@@ -40,26 +40,24 @@ body {
   border-right: 1px solid #F5F8FA;
 }
 
-.twitterLogo, .home, .explore, .notifications, .messages, .bookmarks, .twitterBlue, .profile, .more, .tweetBackground {
+.twitterLogo, .home, .explore, .notifications, .messages, .bookmarks, .twitterBlue, .profile, .more, .tweet {
   display: flex;
-  margin-left: 400px;
-  font-weight: 100px;
+  margin-left: 350px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   gap: 30px;
-}
-
-.tweetBackground {
-  align-content: center;
-  color: white;
-  background-color: #1DA1F2;
-  width: 200px;
-  height: 50px;
-  border-radius: 30px;
 }
 
 .tweet {
   display: flex;
-  align-self: center;
   justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #1DA1F2;
+  border-radius: 30px;
+  width: 250px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
 }
