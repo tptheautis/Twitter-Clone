@@ -114,13 +114,28 @@ function createHomePage() {
 
   // Right Side Bar
   const searchTwitter = document.createElement('div');
-  const whatsHappening = document.createElement('div');
+  const whatsHappening = document.createElement('h2');
   const searchTwitterText = document.createTextNode('Search Twitter');
   const whatsHappeningText = document.createTextNode('What\'s Happening');
+  const homeHeading = document.createElement('h1');
+  const forYou = document.createElement('div');
+  const following = document.createElement('div');
+  homeHeading.classList.add('homeHeading');
+  forYou.classList.add('forYou');
+  following.classList.add('following');
+  const homeHeadingText = document.createTextNode('Home');
+  const forYouText = document.createTextNode('For you');
+  const followingText =document.createTextNode('Following');
+  homeHeading.append(homeHeadingText);
+  forYou.append(forYouText);
+  following.append(followingText);
   searchTwitter.append(searchTwitterText);
-  whatsHappening.append(whatsHappeningText)
+  whatsHappening.append(whatsHappeningText);
   column3.append(searchTwitter);
   column3.append(whatsHappening);
+  row1.append(homeHeading);
+  row1.append(forYou);
+  row1.append(following);
 }
 
 export default createHomePage();
