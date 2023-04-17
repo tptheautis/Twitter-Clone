@@ -7,18 +7,22 @@ function createHomePage() {
   const column3 = document.createElement('div');
   const row1 = document.createElement('div');
   const row2 = document.createElement('div');
+  const searchBar = document.createElement('div');
   mainContainer.classList.add('mainContainer');
   column1.classList.add('column1');
   column2.classList.add('column2');
   column3.classList.add('column3');
   row1.classList.add('row1');
   row2.classList.add('row2');
+  searchBar.classList.add('searchBar');
   content.append(mainContainer);
   mainContainer.append(column1);
   mainContainer.append(column2);
   mainContainer.append(column3);
   column2.append(row1);
   column2.append(row2);
+  column3.append(searchBar);
+
 
   // Left Sidebar
   const home = document.createElement('div');
@@ -112,7 +116,7 @@ function createHomePage() {
   column1.append(more);
   column1.append(tweet);
 
-  // Right Side Bar
+  // Middle
   const searchTwitter = document.createElement('div');
   const whatsHappening = document.createElement('h2');
   const searchTwitterText = document.createTextNode('Search Twitter');
@@ -125,7 +129,7 @@ function createHomePage() {
   following.classList.add('following');
   const homeHeadingText = document.createTextNode('Home');
   const forYouText = document.createTextNode('For you');
-  const followingText =document.createTextNode('Following');
+  const followingText = document.createTextNode('Following');
   homeHeading.append(homeHeadingText);
   forYou.append(forYouText);
   following.append(followingText);
@@ -136,6 +140,9 @@ function createHomePage() {
   row1.append(homeHeading);
   row1.append(forYou);
   row1.append(following);
+
+  // Right Sidebar
+
 }
 
 export default createHomePage();
