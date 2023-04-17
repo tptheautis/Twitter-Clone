@@ -9,6 +9,7 @@ function createHomePage() {
   const row2 = document.createElement('div');
   const searchBar = document.createElement('div');
   const happeningContainer = document.createElement('div');
+  const whoToFollowContainer = document.createElement('div');
   mainContainer.classList.add('mainContainer');
   column1.classList.add('column1');
   column2.classList.add('column2');
@@ -17,6 +18,7 @@ function createHomePage() {
   row2.classList.add('row2');
   searchBar.classList.add('searchBar');
   happeningContainer.classList.add('happeningContainer');
+  whoToFollowContainer.classList.add('whoToFollowContainer');
   content.append(mainContainer);
   mainContainer.append(column1);
   mainContainer.append(column2);
@@ -25,6 +27,7 @@ function createHomePage() {
   column2.append(row2);
   column3.append(searchBar);
   column3.append(happeningContainer);
+  column3.append(whoToFollowContainer);
 
 
   // Left Sidebar
