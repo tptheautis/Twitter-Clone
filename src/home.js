@@ -24,6 +24,7 @@ function createHomePage() {
   const profile = document.createElement('div');
   const more = document.createElement('div');
   const tweet = document.createElement('div');
+  const tweetBackground = document.createElement('div');
 
   // Left Sidebar Images
   const twitterLogo = document.createElement('img');
@@ -73,6 +74,7 @@ function createHomePage() {
   twitterBlue.classList.add('twitterBlue');
   profile.classList.add('profile');
   more.classList.add('more');
+  tweetBackground.classList.add('tweetBackground');
   tweet.classList.add('tweet');
 
   // Left Sidebar Text
@@ -104,7 +106,18 @@ function createHomePage() {
   column1.append(twitterBlue);
   column1.append(profile);
   column1.append(more);
-  column1.append(tweet);
+  column1.append(tweetBackground);
+  tweetBackground.append(tweet);
+
+  // Right Side Bar 
+  const searchTwitter = document.createElement('div');
+  const whatsHappening = document.createElement('div');
+  const searchTwitterText = document.createTextNode('Search Twitter');
+  const whatsHappeningText = document.createTextNode('What\'s Happening');
+  searchTwitter.append(searchTwitterText);
+  whatsHappening.append(whatsHappeningText)
+  column3.append(searchTwitter);
+  column3.append(whatsHappening);
 }
 
 export default createHomePage();

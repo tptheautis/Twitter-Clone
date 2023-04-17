@@ -17,24 +17,30 @@ body {
   gap: 35px;
   height: 100vh;
   flex: 1;
-  border: 1px solid #F5F8FA;
+  border-left: 1px solid #F5F8FA;
+  border-bottom: 1px solid #F5F8FA;
+  border-right: 1px solid #F5F8FA
 }
 
 .column2 {
   display: flex;
   height: 100vh;
   width: 33%;
-  border: 1px solid #F5F8FA;
+  border-left: 1px solid #F5F8FA;
+  border-bottom: 1px solid #F5F8FA;
+  border-right: 1px solid #F5F8FA
 }
 
 .column3 {
   display: flex;
   height: 100vh;
   flex: 1;
-  border: 1px solid #F5F8FA;
+  border-left: 1px solid #F5F8FA;
+  border-bottom: 1px solid #F5F8FA;
+  border-right: 1px solid #F5F8FA;
 }
 
-.twitterLogo, .home, .explore, .notifications, .messages, .bookmarks, .twitterBlue, .profile, .more, .tweet {
+.twitterLogo, .home, .explore, .notifications, .messages, .bookmarks, .twitterBlue, .profile, .more, .tweetBackground {
   display: flex;
   margin-left: 400px;
   font-weight: 100px;
@@ -43,11 +49,17 @@ body {
   gap: 30px;
 }
 
-.tweet {
-  text-align: center;
+.tweetBackground {
+  align-content: center;
   color: white;
   background-color: #1DA1F2;
   width: 200px;
   height: 50px;
   border-radius: 30px;
+}
+
+.tweet {
+  display: flex;
+  align-self: center;
+  justify-content: center;
 }
