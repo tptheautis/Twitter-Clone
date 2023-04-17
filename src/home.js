@@ -5,14 +5,20 @@ function createHomePage() {
   const column1 = document.createElement('div');
   const column2 = document.createElement('div');
   const column3 = document.createElement('div');
+  const row1 = document.createElement('div');
+  const row2 = document.createElement('div');
   mainContainer.classList.add('mainContainer');
   column1.classList.add('column1');
   column2.classList.add('column2');
   column3.classList.add('column3');
+  row1.classList.add('row1');
+  row2.classList.add('row2');
   content.append(mainContainer);
   mainContainer.append(column1);
   mainContainer.append(column2);
   mainContainer.append(column3);
+  column2.append(row1);
+  column2.append(row2);
 
   // Left Sidebar
   const home = document.createElement('div');
