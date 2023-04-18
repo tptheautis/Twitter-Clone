@@ -92,5 +92,12 @@ body {
   border-radius: 20px;
   width: 35rem;
   height: 50rem;
+}
 
+.whoToFollowContainer {
+  display: flex;
+  background-color: #F5F8FA;
+  border-radius: 20px;
+  width: 35rem;
+  height: 20rem;
 }
