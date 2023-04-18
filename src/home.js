@@ -29,7 +29,6 @@ function createHomePage() {
   column3.append(happeningContainer);
   column3.append(whoToFollowContainer);
 
-
   // Left Sidebar
   const home = document.createElement('div');
   const explore = document.createElement('div');
