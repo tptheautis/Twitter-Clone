@@ -80,6 +80,11 @@ body {
 
 .searchBar {
   display: flex;
+  align-items: center;
+  color: #657786;
+  gap: 2rem;
+  font-size: 1.7rem;
+  padding-left: 2rem;
   background-color: #F5F8FA;
   border-radius: 20px;
   width: 35rem;

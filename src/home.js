@@ -147,7 +147,11 @@ function createHomePage() {
   row1.append(following);
 
   // Right Sidebar
-
+  const searchIcon = document.createElement('img');
+  searchIcon.classList.add('searchIcon');
+  searchIcon.src = '../src/assets/searchIcon.png';
+  searchBar.append(searchIcon);
+  searchBar.append(searchTwitterText);
 }
 
 export default createHomePage();
