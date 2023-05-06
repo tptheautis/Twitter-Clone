@@ -100,6 +100,14 @@ function createHomePage() {
   profile.classList.add('profile');
   more.classList.add('more');
   tweet.classList.add('tweet');
+  homeContainer.classList.add('homeContainer');
+  exploreContainer.classList.add('exploreContainer');
+  notifications.classList.add('notificationsContainer');
+  messagesContainer.classList.add('messagesContainer');
+  bookmarksContainer.classList.add('bookmarksContainer');
+  twitterBlueContainer.classList.add('twitterBlueContainer');
+  profileContainer.classList.add('profileContainer');
+  moreContainer.classList.add('moreContainer');
 
   // Left Sidebar Text
   const homeText = document.createTextNode('Home');
