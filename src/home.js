@@ -113,15 +113,7 @@ function createHomePage() {
   const tweetText = document.createTextNode('Tweet');
 
   // Left Sidebar Appending
-  column1.append(homeContainer);
-  column1.append(exploreContainer);
-  column1.append(notificationsContainer);
-  column1.append(messagesContainer);
-  column1.append(bookmarksContainer);
-  column1.append(twitterBlueContainer);
-  column1.append(profileContainer);
-  column1.append(moreContainer);
-  column1.append(tweetContainer);
+  column1.append(homeContainer, exploreContainer, notificationsContainer, messagesContainer, bookmarksContainer, twitterBlueContainer, profileContainer, moreContainer, tweetContainer);
   homeContainer.append(homeLogo, homeText);
   exploreContainer.append(exploreLogo, exploreText);
   notificationsContainer.append(notificationsLogo, notificationsText);
