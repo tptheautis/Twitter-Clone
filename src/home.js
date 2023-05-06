@@ -89,7 +89,6 @@ function createHomePage() {
   moreLogo.src = '../src/assets/more.png';
   more.append(moreLogo);
 
-
   // Left Sidebar Classes
   home.classList.add('home');
   explore.classList.add('explore');
@@ -102,7 +101,7 @@ function createHomePage() {
   tweet.classList.add('tweet');
   homeContainer.classList.add('homeContainer');
   exploreContainer.classList.add('exploreContainer');
-  notifications.classList.add('notificationsContainer');
+  notificationsContainer.classList.add('notificationsContainer');
   messagesContainer.classList.add('messagesContainer');
   bookmarksContainer.classList.add('bookmarksContainer');
   twitterBlueContainer.classList.add('twitterBlueContainer');

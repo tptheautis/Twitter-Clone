@@ -47,10 +47,19 @@ body {
   border-right: 1px solid #F5F8FA;
 }
 
-.twitterLogo, .home, .explore, .notifications, .messages, .bookmarks, .twitterBlue, .profile, .more, .tweet {
+.homeContainer, .exploreContainer, .notificationsContainer, .messagesContainer, .bookmarksContainer, .twitterBlueContainer, .profileContainer, .moreContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 35rem;
+  gap: 1.5rem;
+  font-size: 2.2rem;
+}
+
+.twitterLogo, .tweet {
   display: flex;
   margin-left: 35rem;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 2.2rem;
   gap: 3rem;
 }
