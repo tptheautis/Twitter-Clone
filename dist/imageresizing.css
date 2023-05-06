@@ -1,6 +1,6 @@
 .twitterLogo, .homeLogo, .exploreLogo, .notificationsLogo, .messagesLogo, .bookmarksLogo, .twitterBlueLogo, .profileLogo, .moreLogo, .tweetLogo {
-    width: 1.7rem;
-    height: 1.7rem;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .searchIcon {
@@ -8,6 +8,10 @@
     height: 1.7rem;
 }
 
+.odinIcon {
+    width: 1rem;
+    height: 1rem;
+}
 
 
 

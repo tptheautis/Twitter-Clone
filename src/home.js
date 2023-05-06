@@ -1,6 +1,6 @@
 function createHomePage() {
+  // Base layout
   const content = document.getElementById('content');
-  // Base Layout
   const mainContainer = document.createElement('div');
   const column1 = document.createElement('div');
   const column2 = document.createElement('div');
@@ -29,7 +29,7 @@ function createHomePage() {
   column3.append(happeningContainer);
   column3.append(whoToFollowContainer);
 
-  // Left Sidebar
+  // Left Sidebar Elements
   const home = document.createElement('div');
   const explore = document.createElement('div');
   const notifications = document.createElement('div');
@@ -39,6 +39,17 @@ function createHomePage() {
   const profile = document.createElement('div');
   const more = document.createElement('div');
   const tweet = document.createElement('div');
+
+  //Left Sidebar Containers 
+  const homeContainer = document.createElement('div')
+  const exploreContainer = document.createElement('div');
+  const notificationsContainer = document.createElement('div');
+  const messagesContainer = document.createElement('div');
+  const bookmarksContainer = document.createElement('div');
+  const twitterBlueContainer = document.createElement('div');
+  const profileContainer = document.createElement('div');
+  const moreContainer = document.createElement('div');
+  const tweetContainer = document.createElement('div');
 
   // Left Sidebar Images
   const twitterLogo = document.createElement('img');
@@ -101,7 +112,7 @@ function createHomePage() {
   const moreText = document.createTextNode('More');
   const tweetText = document.createTextNode('Tweet');
 
-  // Left Sidebar appending
+  // Left Sidebar Appending
   home.append(homeText);
   explore.append(exploreText);
   notifications.append(notificationsText);
@@ -121,7 +132,7 @@ function createHomePage() {
   column1.append(more);
   column1.append(tweet);
 
-  // Middle
+  // Middle Elements
   const searchTwitter = document.createElement('div');
   const whatsHappening = document.createElement('h2');
   const searchTwitterText = document.createTextNode('Search Twitter');
@@ -147,11 +158,29 @@ function createHomePage() {
   row1.append(following);
 
   // Right Sidebar
+  //SearchBar
   const searchIcon = document.createElement('img');
   searchIcon.classList.add('searchIcon');
   searchIcon.src = '../src/assets/searchIcon.png';
   searchBar.append(searchIcon);
-  searchBar.append(searchTwitterText);
+  searchBar.append(searchTwitterText);a
+  const whoToFollowText = document.createTextNode('Who to follow')
+  whoToFollowContainer.append(whoToFollowText);
+  //Odin Project Profile
+  const odinContainer = document.createElement('div');
+  odinContainer.classList.add('odinContainer');
+  whoToFollowContainer.append(odinContainer);
+  const odinIcon = document.createElement('img');
+  odinIcon.classList.add('odinIcon');
+  odinIcon.src = '../src/assets/odinIcon.png';
+  const odinText = doucment.createTextNode('@TheOdinProject');
+  whoToFollowContainer.append(odinText);
+  
+  whoToFollowContainer.append(odinIcon);
+  //Stack Overflow Profile
+
+  //Github Profile
+
 }
 
 export default createHomePage();
