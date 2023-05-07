@@ -130,6 +130,7 @@ function createHomePage() {
   profileContainer.append(profileLogo, profileText);
   moreContainer.append(moreLogo, moreText);
   column1.append(tweet);
+  tweet.append(tweetText);
 
   // Middle Elements
   const searchTwitter = document.createElement('div');
