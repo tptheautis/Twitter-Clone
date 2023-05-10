@@ -54,7 +54,7 @@ function createHomePage() {
   // Left Sidebar Images
   const twitterLogo = document.createElement('img');
   twitterLogo.classList.add('twitterLogo');
-  twitterLogo.src = '../src/assets/twitter.png';
+  twitterLogo.src = '../src/assets/twitter-logo.png';
   column1.append(twitterLogo);
   const homeLogo = document.createElement('img');
   homeLogo.classList.add('homeLogo');
@@ -150,7 +150,7 @@ function createHomePage() {
   forYou.append(forYouText);
   following.append(followingText);
   searchTwitter.append(searchTwitterText);
-  whatsHappening.append(whatsHappeningText);
+  happeningContainer.append(whatsHappeningText);
   column3.append(searchTwitter);
   column3.append(whatsHappening);
   row1.append(homeHeading);
@@ -158,29 +158,37 @@ function createHomePage() {
   row1.append(following);
 
   // Right Sidebar
+  const whoToFollowText = document.createTextNode('Who to follow')
   //SearchBar
   const searchIcon = document.createElement('img');
   searchIcon.classList.add('searchIcon');
   searchIcon.src = '../src/assets/searchIcon.png';
   searchBar.append(searchIcon);
-  searchBar.append(searchTwitterText);a
-  const whoToFollowText = document.createTextNode('Who to follow')
-  whoToFollowContainer.append(whoToFollowText);
+  searchBar.append(searchTwitterText);
   //Odin Project Profile
   const odinContainer = document.createElement('div');
   odinContainer.classList.add('odinContainer');
-  whoToFollowContainer.append(odinContainer);
   const odinIcon = document.createElement('img');
   odinIcon.classList.add('odinIcon');
   odinIcon.src = '../src/assets/odinIcon.png';
-  const odinText = doucment.createTextNode('@TheOdinProject');
-  whoToFollowContainer.append(odinText);
-  
-  whoToFollowContainer.append(odinIcon);
+  const odinTextContainer = document.createElement('div');
+  odinTextContainer.classList.add('whoToFollowContainerChild');
+  const odinName = document.createTextNode('The Odin Project')
+  const odinUsername = document.createTextNode('@TheOdinProject')
+  whoToFollowContainer.append(whoToFollowText);
+  whoToFollowContainer.append(odinContainer); 
+  odinContainer.append(odinIcon);
+  odinContainer.append(odinName);
+  odinContainer.append(odinUsername);
+
   //Stack Overflow Profile
-
+  const stackContainer = document.createElement('div');
+  stackContainer.classList.add('stackContainer');
+  whoToFollowContainer.append(stackContainer);
   //Github Profile
-
+  const githubContainer = document.createElement('div');
+  githubContainer.classList.add('githubContainer');
+  whoToFollowContainer.append(githubContainer);
 }
 
 export default createHomePage();
