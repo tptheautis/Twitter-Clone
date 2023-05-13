@@ -184,11 +184,25 @@ function createHomePage() {
   //Stack Overflow Profile
   const stackContainer = document.createElement('div');
   stackContainer.classList.add('stackContainer');
+  const stackIcon = document.createElement('img');
+  stackIcon.classList.add('stackIcon');
+  stackIcon.src = '../src/assets/stackIcon.png';
+  const stackName = document.createTextNode('Stack Overflow')
+  const stackUsername = document.createTextNode('@StackOverflow');
   whoToFollowContainer.append(stackContainer);
+  stackContainer.append(stackIcon);
+  stackContainer.append(stackName);
+  stackContainer.append(stackUsername);
   //Github Profile
   const githubContainer = document.createElement('div');
   githubContainer.classList.add('githubContainer');
   whoToFollowContainer.append(githubContainer);
+  //Show More
+  const showMoreContainer = document.createElement('div');
+  showMoreContainer.classList.add('showMore');
+  const showMoreText = document.createTextNode('Show more');
+  whoToFollowContainer.append(showMoreContainer);
+  showMoreContainer.append(showMoreText);
 }
 
 export default createHomePage();
