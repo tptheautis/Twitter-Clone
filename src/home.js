@@ -180,7 +180,6 @@ function createHomePage() {
   odinContainer.append(odinIcon);
   odinContainer.append(odinName);
   odinContainer.append(odinUsername);
-
   //Stack Overflow Profile
   const stackContainer = document.createElement('div');
   stackContainer.classList.add('stackContainer');
@@ -196,10 +195,18 @@ function createHomePage() {
   //Github Profile
   const githubContainer = document.createElement('div');
   githubContainer.classList.add('githubContainer');
+  const githubIcon = document.createElement('img');
+  githubIcon.classList.add('githubIcon');
+  githubIcon.src = '../src/assets/gitIcon.png';
+  const githubName = document.createTextNode('GitHub')
+  const githubUsername = document.createTextNode('@github');
   whoToFollowContainer.append(githubContainer);
+  githubContainer.append(githubIcon);
+  githubContainer.append(githubName);
+  githubContainer.append(githubUsername);
   //Show More
   const showMoreContainer = document.createElement('div');
-  showMoreContainer.classList.add('showMore');
+  showMoreContainer.classList.add('showMoreContainer');
   const showMoreText = document.createTextNode('Show more');
   whoToFollowContainer.append(showMoreContainer);
   showMoreContainer.append(showMoreText);

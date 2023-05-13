@@ -47,7 +47,7 @@ body {
   border-right: 1px solid #F5F8FA;
 }
 
-.twitterLogo, .tweet, .homeContainer, .exploreContainer, .notificationsContainer, .messagesContainer, .bookmarksContainer, .twitterBlueContainer, .profileContainer, .moreContainer {
+.twitterLogo, .tweet, .homeContainer, .exploreContainer, .notificationsContainer, .messagesContainer, .bookmarksContainer, .twitterBlueContainer, .profileContainer , .moreContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -60,7 +60,7 @@ body {
   transition: all 0.3s;
 }
 
-.homeContainer:hover, .exploreContainer:hover, .notificationsContainer:hover, .messagesContainer:hover, .bookmarksContainer:hover, .twitterBlueContainer:hover, .profileContainer:hover, .moreContainer:hover {
+.homeContainer:hover, .exploreContainer:hover, .notificationsContainer:hover, .messagesContainer:hover, .bookmarksContainer:hover, .twitterBlueContainer:hover, .profileContainer:hover ,.moreContainer:hover, .showMoreContainer:hover {
   background-color: #e1e8ed;
 }
 
@@ -124,10 +124,10 @@ body {
   font-weight: 600;
   border-radius: 20px;
   width: 35rem;
-  height: 30rem;
+  height: fit-content;
 }
 
-.odinContainer, .stackContainer, .githubContainer {
+.odinContainer, .stackContainer, .githubContainer, .showMoreContainer {
   display: flex;
   flex: 1;
   flex-direction: row;
@@ -136,7 +136,7 @@ body {
   transition: all 0.3s;
 }
 
-.showMore {
+.showMoreContainer {
   display: flex;
   flex: 2;
   padding: 2rem;
@@ -146,6 +146,6 @@ body {
   transition: all 0.3s;
 }
 
-.odinContainer:hover, .stackContainer:hover, .githubContainer:hover, .showMore:hover {
+.odinContainer:hover, .stackContainer:hover, .githubContainer:hover, .showMoreContainer:hover {
   background-color: #e1e8ed;
 }
