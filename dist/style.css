@@ -127,20 +127,42 @@ body {
   height: fit-content;
 }
 
+.whoToFollowTextContainer {
+  display: flex;
+  padding: 1.4rem;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
 .odinContainer, .stackContainer, .githubContainer, .showMoreContainer {
   display: flex;
   flex: 1;
+  gap: 1rem;
   flex-direction: row;
-  padding: 2rem;
+  padding: 1.4rem;
   font-size: 1.5rem;
   transition: all 0.3s;
+}
+
+.odinTextContainer, .stackTextContainer, .githubTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.odinNameContainer, .stackNameContainer, .githubNameContainer {
+  font-weight: 600;
+}
+
+.odinUsernameContainer, .stackUsernameContainer, .githubUsernameContainer {
+  font-weight: 100;
 }
 
 .showMoreContainer {
   display: flex;
   flex: 2;
   padding: 2rem;
-  color: skyblue;
+  color: #1DA1F2;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   transition: all 0.3s;

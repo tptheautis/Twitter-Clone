@@ -158,6 +158,8 @@ function createHomePage() {
   row1.append(following);
 
   // Right Sidebar
+  const whoToFollowTextContainer = document.createElement('div');
+  whoToFollowTextContainer.classList.add('whoToFollowTextContainer')
   const whoToFollowText = document.createTextNode('Who to follow')
   //SearchBar
   const searchIcon = document.createElement('img');
@@ -172,44 +174,77 @@ function createHomePage() {
   odinIcon.classList.add('odinIcon');
   odinIcon.src = '../src/assets/odinIcon.png';
   const odinTextContainer = document.createElement('div');
-  odinTextContainer.classList.add('whoToFollowContainerChild');
+  odinTextContainer.classList.add('odinTextContainer');
   const odinName = document.createTextNode('The Odin Project')
+  const odinNameContainer = document.createElement('div');
+  odinNameContainer.classList.add('odinNameContainer');
   const odinUsername = document.createTextNode('@TheOdinProject')
-  whoToFollowContainer.append(whoToFollowText);
+  const odinUsernameContainer = document.createElement('div');
+  odinUsernameContainer.classList.add('odinUsernameContainer');
+  whoToFollowContainer.append(whoToFollowTextContainer);
+  whoToFollowTextContainer.append(whoToFollowText);
   whoToFollowContainer.append(odinContainer); 
   odinContainer.append(odinIcon);
-  odinContainer.append(odinName);
-  odinContainer.append(odinUsername);
+  odinContainer.append(odinTextContainer);
+  odinTextContainer.append(odinNameContainer);
+  odinTextContainer.append(odinUsernameContainer);
+  odinNameContainer.append(odinName);
+  odinUsernameContainer.append(odinUsername);
   //Stack Overflow Profile
   const stackContainer = document.createElement('div');
   stackContainer.classList.add('stackContainer');
+  const stackTextContainer = document.createElement('div');
+  stackTextContainer.classList.add('stackTextContainer');
   const stackIcon = document.createElement('img');
   stackIcon.classList.add('stackIcon');
   stackIcon.src = '../src/assets/stackIcon.png';
   const stackName = document.createTextNode('Stack Overflow')
+  const stackNameContainer = document.createElement('div');
+  stackNameContainer.classList.add('stackNameContainer');
   const stackUsername = document.createTextNode('@StackOverflow');
+  const stackUsernameContainer = document.createElement('div');
+  stackUsernameContainer.classList.add('stackUsernameContainer');
   whoToFollowContainer.append(stackContainer);
   stackContainer.append(stackIcon);
-  stackContainer.append(stackName);
-  stackContainer.append(stackUsername);
+  stackContainer.append(stackTextContainer);
+  stackTextContainer.append(stackNameContainer);
+  stackTextContainer.append(stackUsernameContainer);
+  stackNameContainer.append(stackName);
+  stackUsernameContainer.append(stackUsername);
   //Github Profile
   const githubContainer = document.createElement('div');
   githubContainer.classList.add('githubContainer');
+  const githubTextContainer = document.createElement('div');
+  githubTextContainer.classList.add('githubTextContainer');
   const githubIcon = document.createElement('img');
   githubIcon.classList.add('githubIcon');
   githubIcon.src = '../src/assets/gitIcon.png';
   const githubName = document.createTextNode('GitHub')
+  const githubNameContainer = document.createElement('div');
+  githubNameContainer.classList.add('githubNameContainer');
   const githubUsername = document.createTextNode('@github');
+  const githubUsernameContainer = document.createElement('div');
+  githubUsernameContainer.classList.add('githubUsernameContainer');
   whoToFollowContainer.append(githubContainer);
   githubContainer.append(githubIcon);
-  githubContainer.append(githubName);
-  githubContainer.append(githubUsername);
+  githubContainer.append(githubTextContainer);
+  githubTextContainer.append(githubNameContainer);
+  githubTextContainer.append(githubUsernameContainer);
+  githubNameContainer.append(githubName);
+  githubUsernameContainer.append(githubUsername);
   //Show More
   const showMoreContainer = document.createElement('div');
   showMoreContainer.classList.add('showMoreContainer');
   const showMoreText = document.createTextNode('Show more');
   whoToFollowContainer.append(showMoreContainer);
   showMoreContainer.append(showMoreText);
+
+  profileContainer.addEventListener('click', ( )=> {
+    clear();
+    createProfilePage();
+  })
 }
+
+
 
 export default createHomePage();
