@@ -57,7 +57,7 @@ body {
   font-size: 2.2rem;
   border-radius: 30px;
   padding: 1.2rem;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 .homeContainer:hover, .exploreContainer:hover, .notificationsContainer:hover, .messagesContainer:hover, .bookmarksContainer:hover, .twitterBlueContainer:hover, .profileContainer:hover ,.moreContainer:hover, .showMoreContainer:hover {
@@ -91,6 +91,35 @@ body {
 }
 
 /*Middle*/
+.row1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.row1OptionsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.6rem;
+  font-weight: 200;
+  height: 100%;
+}
+
+.forYouContainer, .followingContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s;
+}
+
+.forYouContainer:hover, .followingContainer:hover {
+  background-color: #e1e8ed;
+}
+
+/*Right*/
 
 .searchBar {
   display: flex;
@@ -141,7 +170,7 @@ body {
   flex-direction: row;
   padding: 1.4rem;
   font-size: 1.5rem;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 .odinTextContainer, .stackTextContainer, .githubTextContainer {
@@ -165,7 +194,7 @@ body {
   color: #1DA1F2;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 .odinContainer:hover, .stackContainer:hover, .githubContainer:hover, .showMoreContainer:hover {

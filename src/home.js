@@ -137,25 +137,31 @@ function createHomePage() {
   const whatsHappening = document.createElement('h2');
   const searchTwitterText = document.createTextNode('Search Twitter');
   const whatsHappeningText = document.createTextNode('What\'s Happening');
-  const homeHeading = document.createElement('h1');
+  const homeHeadingContainer = document.createElement('h1');
   const forYou = document.createElement('div');
   const following = document.createElement('div');
-  homeHeading.classList.add('homeHeading');
+  homeHeadingContainer.classList.add('homeHeading');
   forYou.classList.add('forYou');
   following.classList.add('following');
   const homeHeadingText = document.createTextNode('Home');
   const forYouText = document.createTextNode('For you');
+  const forYouContainer = document.createElement('div');
+  forYouContainer.classList.add('forYouContainer');
   const followingText = document.createTextNode('Following');
-  homeHeading.append(homeHeadingText);
-  forYou.append(forYouText);
-  following.append(followingText);
+  const followingContainer = document.createElement('div');
+  followingContainer.classList.add('followingContainer');
+  const row1OptionsContainer = document.createElement('div');
+  row1OptionsContainer.classList.add('row1OptionsContainer');
   searchTwitter.append(searchTwitterText);
   happeningContainer.append(whatsHappeningText);
   column3.append(searchTwitter);
   column3.append(whatsHappening);
-  row1.append(homeHeading);
-  row1.append(forYou);
-  row1.append(following);
+  row1.append(homeHeadingContainer, row1OptionsContainer);
+  homeHeadingContainer.append(homeHeadingText);
+  row1OptionsContainer.append(forYouContainer, followingContainer);
+  forYouContainer.append(forYouText);
+  followingContainer.append(followingText);
+  
 
   // Right Sidebar
   const whoToFollowTextContainer = document.createElement('div');
