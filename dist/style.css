@@ -119,7 +119,7 @@ body {
   background-color: #e1e8ed;
 }
 
-.forYouTextContainer {
+.forYouTextContainer, .followingTextContainer {
   display: flex;
   justify-content: center;
   flex-direction: column;

@@ -149,11 +149,14 @@ function createHomePage() {
   const forYouText = document.createTextNode('For you');
   const forYouContainer = document.createElement('div');
   forYouContainer.classList.add('forYouContainer');
+  forYouContainer.classList.add('.forYouContainer');
   const forYouTextContainer = document.createElement('div');
   forYouTextContainer.classList.add('forYouTextContainer');
   const followingText = document.createTextNode('Following');
   const followingContainer = document.createElement('div');
   followingContainer.classList.add('followingContainer');
+  const followingTextContainer = document.createElement('div');
+  followingTextContainer.classList.add('followingTextContainer');
   const row1OptionsContainer = document.createElement('div');
   row1OptionsContainer.classList.add('row1OptionsContainer');
   searchTwitter.append(searchTwitterText);
@@ -164,21 +167,34 @@ function createHomePage() {
   homeHeadingContainer.append(homeHeadingText);
   row1OptionsContainer.append(forYouContainer, followingContainer);
   forYouContainer.append(forYouTextContainer);
+  followingContainer.append(followingTextContainer);
   forYouTextContainer.append(forYouText);
-  forYouTextContainer.append(blueUnderline);
-  followingContainer.append(followingText);
-  //Button animations
+  followingTextContainer.append(followingText);
+
+  //Blue Underline animation
+  forYouContainer.addEventListener('click', function() {
+    followingTextContainer.style.fontWeight = 200;
+    forYouTextContainer.style.fontWeight = 600;
+    forYouTextContainer.append(blueUnderline);
+  });
+  followingContainer.addEventListener('click', function() {
+    forYouTextContainer.style.fontWeight = 200;
+    followingTextContainer.style.fontWeight = 600;
+    followingTextContainer.append(blueUnderline);
+  });
 
   // Right Sidebar
   const whoToFollowTextContainer = document.createElement('div');
   whoToFollowTextContainer.classList.add('whoToFollowTextContainer')
   const whoToFollowText = document.createTextNode('Who to follow')
+
   //SearchBar
   const searchIcon = document.createElement('img');
   searchIcon.classList.add('searchIcon');
   searchIcon.src = '../src/assets/searchIcon.png';
   searchBar.append(searchIcon);
   searchBar.append(searchTwitterText);
+
   //Odin Project Profile
   const odinContainer = document.createElement('div');
   odinContainer.classList.add('odinContainer');
