@@ -144,9 +144,13 @@ function createHomePage() {
   forYou.classList.add('forYou');
   following.classList.add('following');
   const homeHeadingText = document.createTextNode('Home');
+  const blueUnderline = document.createElement('div');
+  blueUnderline.classList.add('blueUnderline');
   const forYouText = document.createTextNode('For you');
   const forYouContainer = document.createElement('div');
   forYouContainer.classList.add('forYouContainer');
+  const forYouTextContainer = document.createElement('div');
+  forYouTextContainer.classList.add('forYouTextContainer');
   const followingText = document.createTextNode('Following');
   const followingContainer = document.createElement('div');
   followingContainer.classList.add('followingContainer');
@@ -159,9 +163,11 @@ function createHomePage() {
   row1.append(homeHeadingContainer, row1OptionsContainer);
   homeHeadingContainer.append(homeHeadingText);
   row1OptionsContainer.append(forYouContainer, followingContainer);
-  forYouContainer.append(forYouText);
+  forYouContainer.append(forYouTextContainer);
+  forYouTextContainer.append(forYouText);
+  forYouTextContainer.append(blueUnderline);
   followingContainer.append(followingText);
-  
+  //Button animations
 
   // Right Sidebar
   const whoToFollowTextContainer = document.createElement('div');

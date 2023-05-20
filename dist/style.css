@@ -99,7 +99,6 @@ body {
 .row1OptionsContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: row;
   font-size: 1.6rem;
   font-weight: 200;
@@ -110,6 +109,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   transition: all 0.2s;
@@ -117,6 +117,23 @@ body {
 
 .forYouContainer:hover, .followingContainer:hover {
   background-color: #e1e8ed;
+}
+
+.forYouTextContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blueUnderline {
+  display: flex;
+  position: relative;
+  top: 1.5rem;
+  background-color: #1DA1F2;
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
 }
 
 /*Right*/
