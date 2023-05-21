@@ -170,12 +170,11 @@ function createHomePage() {
   followingContainer.append(followingTextContainer);
   forYouTextContainer.append(forYouText);
   followingTextContainer.append(followingText);
-
+  forYouTextContainer.append(blueUnderline);
   //Blue Underline animation
   forYouContainer.addEventListener('click', function() {
     followingTextContainer.style.fontWeight = 200;
     forYouTextContainer.style.fontWeight = 600;
-    forYouTextContainer.style.fontSize = '90%';
     forYouTextContainer.append(blueUnderline);
   });
   followingContainer.addEventListener('click', function() {
@@ -277,9 +276,13 @@ function createHomePage() {
   followingButton.classList.add('followingButton');
   const followingButtonText = document.createTextNode('Following');
   followingButton.append(followingButtonText);
+  const unfollowButton = document.createElement('div');
+  unfollowButton.classList.add('unfollowButton');
+  const unfollowButtonText = document.createTextNode('Unfollow');
+  unfollowButton.append(unfollowButtonText);
 
   //Test
-  odinContainer.append(followingButton);
+  odinContainer.append(unfollowButton);
 
   profileContainer.addEventListener('click', ( )=> {
     clear();

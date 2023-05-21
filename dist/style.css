@@ -252,3 +252,19 @@ body {
   border: 1px solid #cfd9de;
   border-radius: 30px;
 }
+
+.unfollowButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3.2rem;
+  font-size: 1.4rem;
+  padding: 0rem 1.6rem;
+  margin-left: auto;
+  width: 5rem;
+  color: rgb(244, 33, 46);
+  background-color: rgba(244, 33, 46, 0.1);
+  border: 1px solid #FDC9CE;
+  border-radius: 30px;
+}
