@@ -236,3 +236,19 @@ body {
   background-color: rgb(15, 20, 35);
   border-radius: 30px;
 }
+
+.followingButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3.2rem;
+  font-size: 1.4rem;
+  padding: 0rem 2rem;
+  margin-left: auto;
+  width: 5rem;
+  color: rgb(15, 20, 35);
+  background-color: #F5F8FA;
+  border: 1px solid #cfd9de;
+  border-radius: 30px;
+}

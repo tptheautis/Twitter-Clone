@@ -272,8 +272,14 @@ function createHomePage() {
   const followButton = document.createElement('div');
   followButton.classList.add('followButton');
   const followButtonText = document.createTextNode('Follow');
-  odinContainer.append(followButton);
   followButton.append(followButtonText);
+  const followingButton = document.createElement('div');
+  followingButton.classList.add('followingButton');
+  const followingButtonText = document.createTextNode('Following');
+  followingButton.append(followingButtonText);
+
+  //Test
+  odinContainer.append(followingButton);
 
   profileContainer.addEventListener('click', ( )=> {
     clear();
