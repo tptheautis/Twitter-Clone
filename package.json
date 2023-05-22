@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/tptheautis/Twitter-Clone#readme",
   "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
     "html-webpack-plugin": "^5.5.1",
     "html-webpack-plugin-remove": "^0.1.0",
     "webpack": "^5.81.0",

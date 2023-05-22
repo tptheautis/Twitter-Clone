@@ -40,8 +40,8 @@ function createHomePage() {
   const more = document.createElement('div');
   const tweet = document.createElement('div');
 
-  //Left Sidebar Containers 
-  const homeContainer = document.createElement('div')
+  // Left Sidebar Containers
+  const homeContainer = document.createElement('div');
   const exploreContainer = document.createElement('div');
   const notificationsContainer = document.createElement('div');
   const messagesContainer = document.createElement('div');
@@ -120,7 +120,15 @@ function createHomePage() {
   const tweetText = document.createTextNode('Tweet');
 
   // Left Sidebar Appending
-  column1.append(homeContainer, exploreContainer, notificationsContainer, messagesContainer, bookmarksContainer, twitterBlueContainer, profileContainer, moreContainer, tweetContainer);
+  column1.append(homeContainer);
+  column1.append(exploreContainer);
+  column1.append(notificationsContainer);
+  column1.append(messagesContainer);
+  column1.append(bookmarksContainer);
+  column1.append(twitterBlueContainer);
+  column1.append(profileContainer);
+  column1.append(moreContainer);
+  column1.append(tweetContainer);
   homeContainer.append(homeLogo, homeText);
   exploreContainer.append(exploreLogo, exploreText);
   notificationsContainer.append(notificationsLogo, notificationsText);
@@ -171,13 +179,13 @@ function createHomePage() {
   forYouTextContainer.append(forYouText);
   followingTextContainer.append(followingText);
   forYouTextContainer.append(blueUnderline);
-  //Blue Underline animation
-  forYouContainer.addEventListener('click', function() {
+  // Blue Underline animation
+  forYouContainer.addEventListener('click', () => {
     followingTextContainer.style.fontWeight = 200;
     forYouTextContainer.style.fontWeight = 600;
     forYouTextContainer.append(blueUnderline);
   });
-  followingContainer.addEventListener('click', function() {
+  followingContainer.addEventListener('click', () => {
     forYouTextContainer.style.fontWeight = 200;
     followingTextContainer.style.fontWeight = 600;
     followingTextContainer.append(blueUnderline);
@@ -185,17 +193,17 @@ function createHomePage() {
 
   // Right Sidebar
   const whoToFollowTextContainer = document.createElement('div');
-  whoToFollowTextContainer.classList.add('whoToFollowTextContainer')
-  const whoToFollowText = document.createTextNode('Who to follow')
+  whoToFollowTextContainer.classList.add('whoToFollowTextContainer');
+  const whoToFollowText = document.createTextNode('Who to follow');
 
-  //SearchBar
+  // SearchBar
   const searchIcon = document.createElement('img');
   searchIcon.classList.add('searchIcon');
   searchIcon.src = '../src/assets/searchIcon.png';
   searchBar.append(searchIcon);
   searchBar.append(searchTwitterText);
 
-  //Odin Project Profile
+  // Odin Project Profile
   const odinContainer = document.createElement('div');
   odinContainer.classList.add('odinContainer');
   const odinIcon = document.createElement('img');
@@ -203,22 +211,22 @@ function createHomePage() {
   odinIcon.src = '../src/assets/odinIcon.png';
   const odinTextContainer = document.createElement('div');
   odinTextContainer.classList.add('odinTextContainer');
-  const odinName = document.createTextNode('The Odin Project')
+  const odinName = document.createTextNode('The Odin Project');
   const odinNameContainer = document.createElement('div');
   odinNameContainer.classList.add('odinNameContainer');
-  const odinUsername = document.createTextNode('@TheOdinProject')
+  const odinUsername = document.createTextNode('@TheOdinProject');
   const odinUsernameContainer = document.createElement('div');
   odinUsernameContainer.classList.add('odinUsernameContainer');
   whoToFollowContainer.append(whoToFollowTextContainer);
   whoToFollowTextContainer.append(whoToFollowText);
-  whoToFollowContainer.append(odinContainer); 
+  whoToFollowContainer.append(odinContainer);
   odinContainer.append(odinIcon);
   odinContainer.append(odinTextContainer);
   odinTextContainer.append(odinNameContainer);
   odinTextContainer.append(odinUsernameContainer);
   odinNameContainer.append(odinName);
   odinUsernameContainer.append(odinUsername);
-  //Stack Overflow Profile
+  // Stack Overflow Profile
   const stackContainer = document.createElement('div');
   stackContainer.classList.add('stackContainer');
   const stackTextContainer = document.createElement('div');
@@ -226,7 +234,7 @@ function createHomePage() {
   const stackIcon = document.createElement('img');
   stackIcon.classList.add('stackIcon');
   stackIcon.src = '../src/assets/stackIcon.png';
-  const stackName = document.createTextNode('Stack Overflow')
+  const stackName = document.createTextNode('Stack Overflow');
   const stackNameContainer = document.createElement('div');
   stackNameContainer.classList.add('stackNameContainer');
   const stackUsername = document.createTextNode('@StackOverflow');
@@ -239,7 +247,7 @@ function createHomePage() {
   stackTextContainer.append(stackUsernameContainer);
   stackNameContainer.append(stackName);
   stackUsernameContainer.append(stackUsername);
-  //Github Profile
+  // Github Profile
   const githubContainer = document.createElement('div');
   githubContainer.classList.add('githubContainer');
   const githubTextContainer = document.createElement('div');
@@ -247,7 +255,7 @@ function createHomePage() {
   const githubIcon = document.createElement('img');
   githubIcon.classList.add('githubIcon');
   githubIcon.src = '../src/assets/gitIcon.png';
-  const githubName = document.createTextNode('GitHub')
+  const githubName = document.createTextNode('GitHub');
   const githubNameContainer = document.createElement('div');
   githubNameContainer.classList.add('githubNameContainer');
   const githubUsername = document.createTextNode('@github');
@@ -260,36 +268,41 @@ function createHomePage() {
   githubTextContainer.append(githubUsernameContainer);
   githubNameContainer.append(githubName);
   githubUsernameContainer.append(githubUsername);
-  //Show More
+  // Show More
   const showMoreContainer = document.createElement('div');
   showMoreContainer.classList.add('showMoreContainer');
   const showMoreText = document.createTextNode('Show more');
   whoToFollowContainer.append(showMoreContainer);
   showMoreContainer.append(showMoreText);
 
-  //Buttons
-  const followButton = document.createElement('div');
-  followButton.classList.add('followButton');
-  const followButtonText = document.createTextNode('Follow');
-  followButton.append(followButtonText);
-  const followingButton = document.createElement('div');
-  followingButton.classList.add('followingButton');
-  const followingButtonText = document.createTextNode('Following');
-  followingButton.append(followingButtonText);
-  const unfollowButton = document.createElement('div');
-  unfollowButton.classList.add('unfollowButton');
-  const unfollowButtonText = document.createTextNode('Unfollow');
-  unfollowButton.append(unfollowButtonText);
+  // Odin Buttons
+  const odinFollowButton = document.createElement('div');
+  odinFollowButton.classList.add('followButton');
+  const odinFollowButtonText = document.createTextNode('Follow');
+  odinFollowButton.append(odinFollowButtonText);
+  const odinFollowingButton = document.createElement('div');
+  odinFollowingButton.classList.add('followingButton');
+  const odinFollowingButtonText = document.createTextNode('Following');
+  odinFollowingButton.append(odinFollowingButtonText);
+  const odinUnfollowButton = document.createElement('div');
+  odinUnfollowButton.classList.add('unfollowButton');
+  const odinUnfollowButtonText = document.createTextNode('Unfollow');
+  odinUnfollowButton.append(odinUnfollowButtonText);
 
-  //Test
-  odinContainer.append(unfollowButton);
-
-  profileContainer.addEventListener('click', ( )=> {
-    clear();
-    createProfilePage();
-  })
+  // Odin Button Functions
+  odinContainer.append(odinFollowButton);
+  odinFollowButton.addEventListener('click', () => {
+    odinContainer.removeChild(odinFollowButton);
+    odinContainer.append(odinFollowingButton);
+  });
+  odinFollowingButton.addEventListener('mouseenter', () => {
+    odinContainer.removeChild(odinFollowingButton);
+    odinContainer.append(odinUnfollowButton);
+  });
+  odinUnfollowButton.addEventListener('mouseout', () => {
+    odinContainer.removeChild(odinUnfollowButton);
+    odinContainer.append(odinFollowingButton);
+  });
 }
-
-
 
 export default createHomePage();
