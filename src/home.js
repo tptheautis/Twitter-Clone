@@ -303,6 +303,25 @@ function createHomePage() {
     odinContainer.removeChild(odinUnfollowButton);
     odinContainer.append(odinFollowingButton);
   });
+
+  // Odin pop-up
+  const unfollowPopUpContainer = document.createElement('div');
+  unfollowPopUpContainer.classList.add('unfollowPopUpContainer');
+  const popUpUnfollowTitle = document.createTextNode('Unfollow');
+  const popUpPara = document.getElementById('popUpPara');
+  const popUpUnfollowButton = document.createElement('div');
+  popUpUnfollowButton.classList.add('popUpUnfollowButton');
+  const popUpUnfollowButtonText = document.createTextNode('Unfollow');
+  const popUpCancelButton = document.createElement('div');
+  popUpCancelButton.classList.add('popUpCancelButton');
+  const popUpCancelButtonText = document.createTextNode('Cancel');
+  column1.append(unfollowPopUpContainer);
+  unfollowPopUpContainer.append(popUpUnfollowTitle);
+  unfollowPopUpContainer.append(popUpPara);
+  unfollowPopUpContainer.append(popUpUnfollowButton);
+  unfollowPopUpContainer.append(popUpCancelButton);
+  popUpUnfollowButton.append(popUpUnfollowButtonText);
+  popUpCancelButton.append(popUpCancelButtonText);
 }
 
 export default createHomePage();

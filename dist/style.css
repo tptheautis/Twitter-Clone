@@ -268,3 +268,21 @@ body {
   border: 1px solid #FDC9CE;
   border-radius: 30px;
 }
+
+.unfollowPopUpContainer {
+  width: 32rem;
+  height: 32rem;
+  background: red;
+  position: absolute;
+  border-radius: 30px;
+}
+
+.popUpUnfollowButton {
+  display: flex;
+  color: white;
+}
+
+.popUpCancelButton {
+  display: flex;
+  color: black;
+}
