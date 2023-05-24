@@ -308,7 +308,11 @@ function createHomePage() {
   const unfollowPopUpContainer = document.createElement('div');
   unfollowPopUpContainer.classList.add('unfollowPopUpContainer');
   const popUpUnfollowTitle = document.createTextNode('Unfollow');
+  const popUpUnfollowTitleContainer= document.createElement('div');
+  popUpUnfollowTitleContainer.classList.add('popUpUnfollowTitleContainer');
   const popUpPara = document.getElementById('popUpPara');
+  const popUpParaContainer = document.createElement('div');
+  popUpParaContainer.classList.add('popUpParaContainer');
   const popUpUnfollowButton = document.createElement('div');
   popUpUnfollowButton.classList.add('popUpUnfollowButton');
   const popUpUnfollowButtonText = document.createTextNode('Unfollow');
@@ -316,8 +320,10 @@ function createHomePage() {
   popUpCancelButton.classList.add('popUpCancelButton');
   const popUpCancelButtonText = document.createTextNode('Cancel');
   column1.append(unfollowPopUpContainer);
-  unfollowPopUpContainer.append(popUpUnfollowTitle);
-  unfollowPopUpContainer.append(popUpPara);
+  unfollowPopUpContainer.append(popUpUnfollowTitleContainer);
+  popUpUnfollowTitleContainer.append(popUpUnfollowTitle);
+  unfollowPopUpContainer.append(popUpParaContainer);
+  popUpParaContainer.append(popUpPara);
   unfollowPopUpContainer.append(popUpUnfollowButton);
   unfollowPopUpContainer.append(popUpCancelButton);
   popUpUnfollowButton.append(popUpUnfollowButtonText);

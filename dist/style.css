@@ -269,20 +269,64 @@ body {
   border-radius: 30px;
 }
 
+/*Pop-Up*/
+
 .unfollowPopUpContainer {
-  width: 32rem;
-  height: 32rem;
-  background: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25.6rem;
+  height: 25.6rem;
+  background: white;
   position: absolute;
+  padding: 3.2rem;
+  border: 1px solid black;
   border-radius: 30px;
+}
+
+.popUpUnfollowTitleContainer {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.popUpParaContainer {
+  display: flex;
+  width: 100%;
+  font-size: 1.5rem;
+  color: #536471;
+  margin-bottom: 1rem;
 }
 
 .popUpUnfollowButton {
   display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  height: 4.2rem;
+  width: 100%;
   color: white;
+  background-color: rgb(15, 20, 25);
+  border-radius: 30px;
 }
 
 .popUpCancelButton {
   display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  height: 4.2rem;
+  width: 100%;
   color: black;
+  background-color: white;
+  border: 1px solid #cfd9de;
+  border-radius: 30px;
 }
