@@ -307,8 +307,10 @@ function createHomePage() {
   // Odin pop-up
   const unfollowPopUpContainer = document.createElement('div');
   unfollowPopUpContainer.classList.add('unfollowPopUpContainer');
+  const overlay = document.createElement('div');
+  overlay.classList.add('overlay');
   const popUpUnfollowTitle = document.createTextNode('Unfollow');
-  const popUpUnfollowTitleContainer= document.createElement('div');
+  const popUpUnfollowTitleContainer = document.createElement('div');
   popUpUnfollowTitleContainer.classList.add('popUpUnfollowTitleContainer');
   const popUpPara = document.getElementById('popUpPara');
   const popUpParaContainer = document.createElement('div');
@@ -329,9 +331,11 @@ function createHomePage() {
   popUpCancelButton.append(popUpCancelButtonText);
 
   odinUnfollowButton.addEventListener('click', () => {
+    mainContainer.append(overlay);
     mainContainer.append(unfollowPopUpContainer);
   });
   popUpUnfollowButton.addEventListener('click', () => {
+    mainContainer.removeChild(overlay);
     mainContainer.removeChild(unfollowPopUpContainer);
   });
 }
