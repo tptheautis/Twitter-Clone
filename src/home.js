@@ -319,7 +319,6 @@ function createHomePage() {
   const popUpCancelButton = document.createElement('div');
   popUpCancelButton.classList.add('popUpCancelButton');
   const popUpCancelButtonText = document.createTextNode('Cancel');
-  column1.append(unfollowPopUpContainer);
   unfollowPopUpContainer.append(popUpUnfollowTitleContainer);
   popUpUnfollowTitleContainer.append(popUpUnfollowTitle);
   unfollowPopUpContainer.append(popUpParaContainer);
@@ -328,6 +327,13 @@ function createHomePage() {
   unfollowPopUpContainer.append(popUpCancelButton);
   popUpUnfollowButton.append(popUpUnfollowButtonText);
   popUpCancelButton.append(popUpCancelButtonText);
+
+  odinUnfollowButton.addEventListener('click', () => {
+    mainContainer.append(unfollowPopUpContainer);
+  });
+  popUpUnfollowButton.addEventListener('click', () => {
+    mainContainer.removeChild(unfollowPopUpContainer);
+  });
 }
 
 export default createHomePage();
