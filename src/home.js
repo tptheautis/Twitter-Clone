@@ -24,7 +24,6 @@ function createHomePage() {
   mainContainer.append(column2);
   mainContainer.append(column3);
   column2.append(row1);
-  column2.append(row2);
   column3.append(searchBar);
   column3.append(happeningContainer);
   column3.append(whoToFollowContainer);
@@ -152,8 +151,10 @@ function createHomePage() {
   forYou.classList.add('forYou');
   following.classList.add('following');
   const homeHeadingText = document.createTextNode('Home');
-  const blueUnderline = document.createElement('div');
-  blueUnderline.classList.add('blueUnderline');
+  const blueUnderline1 = document.createElement('div');
+  blueUnderline1.classList.add('blueUnderline1');
+  const blueUnderline2 = document.createElement('div');
+  blueUnderline2.classList.add('blueUnderline2');
   const forYouText = document.createTextNode('For you');
   const forYouContainer = document.createElement('div');
   forYouContainer.classList.add('forYouContainer');
@@ -178,17 +179,25 @@ function createHomePage() {
   followingContainer.append(followingTextContainer);
   forYouTextContainer.append(forYouText);
   followingTextContainer.append(followingText);
-  forYouTextContainer.append(blueUnderline);
+  forYouTextContainer.append(blueUnderline1);
+  followingTextContainer.append(blueUnderline2);
+  blueUnderline2.style.backgroundColor = 'white';
+
   // Blue Underline animation
   forYouContainer.addEventListener('click', () => {
     followingTextContainer.style.fontWeight = 200;
     forYouTextContainer.style.fontWeight = 600;
-    forYouTextContainer.append(blueUnderline);
+    blueUnderline1.style.backgroundColor = '#1DA1F2';
+    blueUnderline2.style.backgroundColor = 'white';
   });
   followingContainer.addEventListener('click', () => {
     forYouTextContainer.style.fontWeight = 200;
     followingTextContainer.style.fontWeight = 600;
-    followingTextContainer.append(blueUnderline);
+    blueUnderline2.style.backgroundColor = '#1DA1F2';
+    blueUnderline1.style.backgroundColor = 'white';
+    blueUnderline1.addEvenetListener('mouseover', () => {
+      blueUnderline1.style.backgroundColor = '#e1e8ed';
+    });
   });
 
   // Right Sidebar
@@ -268,6 +277,7 @@ function createHomePage() {
   githubTextContainer.append(githubUsernameContainer);
   githubNameContainer.append(githubName);
   githubUsernameContainer.append(githubUsername);
+
   // Show More
   const showMoreContainer = document.createElement('div');
   showMoreContainer.classList.add('showMoreContainer');
@@ -312,7 +322,7 @@ function createHomePage() {
   const popUpUnfollowTitle = document.createTextNode('Unfollow');
   const popUpUnfollowTitleContainer = document.createElement('div');
   popUpUnfollowTitleContainer.classList.add('popUpUnfollowTitleContainer');
-  const popUpPara = document.getElementById('popUpPara');
+  const popUpPara = document.getElementById('odinPopUpPara');
   const popUpParaContainer = document.createElement('div');
   popUpParaContainer.classList.add('popUpParaContainer');
   const popUpUnfollowButton = document.createElement('div');
@@ -337,6 +347,152 @@ function createHomePage() {
   popUpUnfollowButton.addEventListener('click', () => {
     mainContainer.removeChild(overlay);
     mainContainer.removeChild(unfollowPopUpContainer);
+    odinContainer.removeChild(odinFollowingButton);
+    odinContainer.append(odinFollowButton);
+  });
+  popUpCancelButton.addEventListener('click', () => {
+    mainContainer.removeChild(overlay);
+    mainContainer.removeChild(unfollowPopUpContainer);
+  });
+
+  // Stack Buttons
+  const stackFollowButton = document.createElement('div');
+  stackFollowButton.classList.add('followButton');
+  const stackFollowButtonText = document.createTextNode('Follow');
+  stackFollowButton.append(stackFollowButtonText);
+  const stackFollowingButton = document.createElement('div');
+  stackFollowingButton.classList.add('followingButton');
+  const stackFollowingButtonText = document.createTextNode('Following');
+  stackFollowingButton.append(stackFollowingButtonText);
+  const stackUnfollowButton = document.createElement('div');
+  stackUnfollowButton.classList.add('unfollowButton');
+  const stackUnfollowButtonText = document.createTextNode('Unfollow');
+  stackUnfollowButton.append(stackUnfollowButtonText);
+
+  // Stack Button Functions
+  stackContainer.append(stackFollowButton);
+  stackFollowButton.addEventListener('click', () => {
+    stackContainer.removeChild(stackFollowButton);
+    stackContainer.append(stackFollowingButton);
+  });
+  stackFollowingButton.addEventListener('mouseenter', () => {
+    stackContainer.removeChild(stackFollowingButton);
+    stackContainer.append(stackUnfollowButton);
+  });
+  stackUnfollowButton.addEventListener('mouseout', () => {
+    stackContainer.removeChild(stackUnfollowButton);
+    stackContainer.append(stackFollowButton);
+  });
+
+  // Stack pop-up
+  const stackUnfollowPopUpContainer = document.createElement('div');
+  stackUnfollowPopUpContainer.classList.add('unfollowPopUpContainer');
+  const stackOverlay = document.createElement('div');
+  stackOverlay.classList.add('overlay');
+  const stackPopUpUnfollowTitle = document.createTextNode('Unfollow');
+  const stackPopUpUnfollowTitleContainer = document.createElement('div');
+  stackPopUpUnfollowTitleContainer.classList.add('popUpUnfollowTitleContainer');
+  const stackPopUpPara = document.getElementById('stackPopUpPara');
+  const stackPopUpParaContainer = document.createElement('div');
+  popUpParaContainer.classList.add('popUpParaContainer');
+  const stackPopUpUnfollowButton = document.createElement('div');
+  stackPopUpUnfollowButton.classList.add('popUpUnfollowButton');
+  const stackPopUpUnfollowButtonText = document.createTextNode('Unfollow');
+  const stackPopUpCancelButton = document.createElement('div');
+  stackPopUpCancelButton.classList.add('popUpCancelButton');
+  const stackPopUpCancelButtonText = document.createTextNode('Cancel');
+  stackUnfollowPopUpContainer.append(stackPopUpUnfollowTitleContainer);
+  stackPopUpUnfollowTitleContainer.append(stackPopUpUnfollowTitle);
+  stackUnfollowPopUpContainer.append(stackPopUpParaContainer);
+  stackPopUpParaContainer.append(stackPopUpPara);
+  stackUnfollowPopUpContainer.append(stackPopUpUnfollowButton);
+  stackUnfollowPopUpContainer.append(stackPopUpCancelButton);
+  stackPopUpUnfollowButton.append(stackPopUpUnfollowButtonText);
+  stackPopUpCancelButton.append(stackPopUpCancelButtonText);
+
+  stackUnfollowButton.addEventListener('click', () => {
+    mainContainer.appendChild(stackOverlay);
+    mainContainer.appendChild(stackUnfollowPopUpContainer);
+  });
+  stackPopUpUnfollowButton.addEventListener('click', () => {
+    mainContainer.removeChild(stackOverlay);
+    mainContainer.removeChild(stackUnfollowPopUpContainer);
+    stackContainer.removeChild(stackFollowingButton);
+    stackContainer.append(stackFollowButton);
+  });
+  stackPopUpCancelButton.addEventListener('click', () => {
+    mainContainer.removeChild(stackOverlay);
+    mainContainer.removeChild(stackUnfollowPopUpContainer);
+  });
+
+  // Github Buttons
+  const githubFollowButton = document.createElement('div');
+  githubFollowButton.classList.add('followButton');
+  const githubFollowButtonText = document.createTextNode('Follow');
+  githubFollowButton.append(githubFollowButtonText);
+  const githubFollowingButton = document.createElement('div');
+  githubFollowingButton.classList.add('followingButton');
+  const githubFollowingButtonText = document.createTextNode('Following');
+  githubFollowingButton.append(githubFollowingButtonText);
+  const githubUnfollowButton = document.createElement('div');
+  githubUnfollowButton.classList.add('unfollowButton');
+  const githubUnfollowButtonText = document.createTextNode('Unfollow');
+  githubUnfollowButton.append(githubUnfollowButtonText);
+
+  // Github Button Functions
+  githubContainer.append(githubFollowButton);
+  githubFollowButton.addEventListener('click', () => {
+    githubContainer.removeChild(githubFollowButton);
+    githubContainer.append(githubFollowingButton);
+  });
+  githubFollowingButton.addEventListener('mouseenter', () => {
+    githubContainer.removeChild(githubFollowingButton);
+    githubContainer.append(githubUnfollowButton);
+  });
+  githubUnfollowButton.addEventListener('mouseout', () => {
+    githubContainer.removeChild(githubUnfollowButton);
+    githubContainer.append(githubFollowButton);
+  });
+
+  // Github pop-up
+  const githubUnfollowPopUpContainer = document.createElement('div');
+  githubUnfollowPopUpContainer.classList.add('unfollowPopUpContainer');
+  const githubOverlay = document.createElement('div');
+  githubOverlay.classList.add('overlay');
+  const githubPopUpUnfollowTitle = document.createTextNode('Unfollow');
+  const githubPopUpUnfollowTitleContainer = document.createElement('div');
+  githubPopUpUnfollowTitleContainer.classList.add('popUpUnfollowTitleContainer');
+  const githubPopUpPara = document.getElementById('githubPopUpPara');
+  const githubPopUpParaContainer = document.createElement('div');
+  popUpParaContainer.classList.add('popUpParaContainer');
+  const githubPopUpUnfollowButton = document.createElement('div');
+  githubPopUpUnfollowButton.classList.add('popUpUnfollowButton');
+  const githubPopUpUnfollowButtonText = document.createTextNode('Unfollow');
+  const githubPopUpCancelButton = document.createElement('div');
+  githubPopUpCancelButton.classList.add('popUpCancelButton');
+  const githubPopUpCancelButtonText = document.createTextNode('Cancel');
+  githubUnfollowPopUpContainer.append(githubPopUpUnfollowTitleContainer);
+  githubPopUpUnfollowTitleContainer.append(githubPopUpUnfollowTitle);
+  githubUnfollowPopUpContainer.append(githubPopUpParaContainer);
+  githubPopUpParaContainer.append(githubPopUpPara);
+  githubUnfollowPopUpContainer.append(githubPopUpUnfollowButton);
+  githubUnfollowPopUpContainer.append(githubPopUpCancelButton);
+  githubPopUpUnfollowButton.append(githubPopUpUnfollowButtonText);
+  githubPopUpCancelButton.append(githubPopUpCancelButtonText);
+
+  githubUnfollowButton.addEventListener('click', () => {
+    mainContainer.appendChild(githubOverlay);
+    mainContainer.appendChild(githubUnfollowPopUpContainer);
+  });
+  githubPopUpUnfollowButton.addEventListener('click', () => {
+    mainContainer.removeChild(githubOverlay);
+    mainContainer.removeChild(githubUnfollowPopUpContainer);
+    githubContainer.removeChild(githubFollowingButton);
+    githubContainer.append(githubFollowButton);
+  });
+  githubPopUpCancelButton.addEventListener('click', () => {
+    mainContainer.removeChild(githubOverlay);
+    mainContainer.removeChild(githubUnfollowPopUpContainer);
   });
 }
 
