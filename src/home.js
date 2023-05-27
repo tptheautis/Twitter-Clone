@@ -381,7 +381,7 @@ function createHomePage() {
   });
   stackUnfollowButton.addEventListener('mouseout', () => {
     stackContainer.removeChild(stackUnfollowButton);
-    stackContainer.append(stackFollowButton);
+    stackContainer.append(stackFollowingButton);
   });
 
   // Stack pop-up
@@ -451,7 +451,7 @@ function createHomePage() {
   });
   githubUnfollowButton.addEventListener('mouseout', () => {
     githubContainer.removeChild(githubUnfollowButton);
-    githubContainer.append(githubFollowButton);
+    githubContainer.append(githubFollowingButton);
   });
 
   // Github pop-up
