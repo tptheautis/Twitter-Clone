@@ -320,8 +320,11 @@ function createHomePage() {
   const overlay = document.createElement('div');
   overlay.classList.add('overlay');
   const popUpUnfollowTitle = document.createTextNode('Unfollow');
-  const popUpUnfollowTitleContainer = document.createElement('div');
-  popUpUnfollowTitleContainer.classList.add('popUpUnfollowTitleContainer');
+  const odinPopUpUsername = document.createTextNode('@TheOdinProject?');
+  const odinPopUpUsernameContainer = document.createElement('div');
+  odinPopUpUsernameContainer.classList.add('popUpUnfollowUsernameContainer');
+  const odinPopUpUnfollowTitleContainer = document.createElement('div');
+  odinPopUpUnfollowTitleContainer.classList.add('popUpUnfollowTitleContainer');
   const popUpPara = document.getElementById('odinPopUpPara');
   const popUpParaContainer = document.createElement('div');
   popUpParaContainer.classList.add('popUpParaContainer');
@@ -331,8 +334,10 @@ function createHomePage() {
   const popUpCancelButton = document.createElement('div');
   popUpCancelButton.classList.add('popUpCancelButton');
   const popUpCancelButtonText = document.createTextNode('Cancel');
-  unfollowPopUpContainer.append(popUpUnfollowTitleContainer);
-  popUpUnfollowTitleContainer.append(popUpUnfollowTitle);
+  unfollowPopUpContainer.append(odinPopUpUnfollowTitleContainer);
+  unfollowPopUpContainer.append(odinPopUpUsernameContainer);
+  odinPopUpUnfollowTitleContainer.append(popUpUnfollowTitle);
+  odinPopUpUsernameContainer.append(odinPopUpUsername);
   unfollowPopUpContainer.append(popUpParaContainer);
   popUpParaContainer.append(popUpPara);
   unfollowPopUpContainer.append(popUpUnfollowButton);
@@ -392,6 +397,9 @@ function createHomePage() {
   const stackPopUpUnfollowTitle = document.createTextNode('Unfollow');
   const stackPopUpUnfollowTitleContainer = document.createElement('div');
   stackPopUpUnfollowTitleContainer.classList.add('popUpUnfollowTitleContainer');
+  const stackPopUpUnfollowUsername = document.createTextNode('@StackOverflow?');
+  const stackPopUpUnfollowUsernameContainer = document.createElement('div');
+  stackPopUpUnfollowUsernameContainer.classList.add('popUpUnfollowUsernameContainer');
   const stackPopUpPara = document.getElementById('stackPopUpPara');
   const stackPopUpParaContainer = document.createElement('div');
   popUpParaContainer.classList.add('popUpParaContainer');
@@ -402,7 +410,9 @@ function createHomePage() {
   stackPopUpCancelButton.classList.add('popUpCancelButton');
   const stackPopUpCancelButtonText = document.createTextNode('Cancel');
   stackUnfollowPopUpContainer.append(stackPopUpUnfollowTitleContainer);
+  stackUnfollowPopUpContainer.append(stackPopUpUnfollowUsernameContainer);
   stackPopUpUnfollowTitleContainer.append(stackPopUpUnfollowTitle);
+  stackPopUpUnfollowUsernameContainer.append(stackPopUpUnfollowUsername);
   stackUnfollowPopUpContainer.append(stackPopUpParaContainer);
   stackPopUpParaContainer.append(stackPopUpPara);
   stackUnfollowPopUpContainer.append(stackPopUpUnfollowButton);
@@ -462,6 +472,9 @@ function createHomePage() {
   const githubPopUpUnfollowTitle = document.createTextNode('Unfollow');
   const githubPopUpUnfollowTitleContainer = document.createElement('div');
   githubPopUpUnfollowTitleContainer.classList.add('popUpUnfollowTitleContainer');
+  const githubPopUpUnfollowUsername = document.createTextNode('@github?');
+  const githubPopUpUnfollowUsernameContainer = document.createElement('div');
+  githubPopUpUnfollowUsernameContainer.classList.add('popUpUnfollowUsernameContainer');
   const githubPopUpPara = document.getElementById('githubPopUpPara');
   const githubPopUpParaContainer = document.createElement('div');
   popUpParaContainer.classList.add('popUpParaContainer');
@@ -472,7 +485,9 @@ function createHomePage() {
   githubPopUpCancelButton.classList.add('popUpCancelButton');
   const githubPopUpCancelButtonText = document.createTextNode('Cancel');
   githubUnfollowPopUpContainer.append(githubPopUpUnfollowTitleContainer);
+  githubUnfollowPopUpContainer.append(githubPopUpUnfollowUsernameContainer);
   githubPopUpUnfollowTitleContainer.append(githubPopUpUnfollowTitle);
+  githubPopUpUnfollowUsernameContainer.append(githubPopUpUnfollowUsername);
   githubUnfollowPopUpContainer.append(githubPopUpParaContainer);
   githubPopUpParaContainer.append(githubPopUpPara);
   githubUnfollowPopUpContainer.append(githubPopUpUnfollowButton);
