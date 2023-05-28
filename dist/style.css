@@ -95,6 +95,19 @@ body {
   border-bottom: 1px solid #F5F8FA;
 }
 
+.tweetPopUpContainer {
+  display: flex;
+  position: fixed;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60rem;
+  height: 30rem;
+  background-color: white;
+  border-radius: 30px;
+  border: red solid 1px;
+}
+
 /*Middle*/
 .row1 {
   display: flex;
@@ -182,7 +195,7 @@ body {
   display: flex;
   padding: 1.4rem;
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .odinContainer, .stackContainer, .githubContainer, .showMoreContainer {

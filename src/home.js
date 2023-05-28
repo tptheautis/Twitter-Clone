@@ -183,6 +183,26 @@ function createHomePage() {
   followingTextContainer.append(blueUnderline2);
   blueUnderline2.style.backgroundColor = 'white';
 
+  // Left Sidebar Tweet PopUp
+  const tweetPopUpContainer = document.createElement('div');
+  tweetPopUpContainer.classList.add('tweetPopUpContainer');
+  const tweetPopUpOverlay = document.createElement('div');
+  tweetPopUpOverlay.classList.add('overlay');
+  const tweetX = document.createElement('img');
+  tweetX.classList.add('tweetX');
+  tweetX.src = '../src/assets/x.png';
+  tweetPopUpContainer.append(tweetX);
+
+  tweet.addEventListener('click', () => {
+    mainContainer.append(tweetPopUpOverlay);
+    mainContainer.append(tweetPopUpContainer);
+    console.log('working');
+  });
+  tweetX.addEventListener('click', () => {
+    mainContainer.removeChild(tweetPopUpOverlay);
+    mainContainer.removeChild(tweetPopUpContainer);
+  });
+
   // Blue Underline animation
   forYouContainer.addEventListener('click', () => {
     followingTextContainer.style.fontWeight = 200;
