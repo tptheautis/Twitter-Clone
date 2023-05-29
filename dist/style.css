@@ -96,8 +96,11 @@ body {
 }
 
 .tweetPopUpContainer {
-  display: flex;
+  display: grid;
   position: fixed;
+  grid-template-columns: [line1] 5rem [line2] 1fr [line3];
+  grid-template-rows: [line1] 5rem [line2] 1fr [line3] 5rem [line4];
+  padding: 1.6rem;
   top: 23%;
   left: 50%;
   transform: translate(-50%, -50%);

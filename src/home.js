@@ -186,12 +186,19 @@ function createHomePage() {
   // Left Sidebar Tweet PopUp
   const tweetPopUpContainer = document.createElement('div');
   tweetPopUpContainer.classList.add('tweetPopUpContainer');
+  const tweetPopUpContainerHeader = document.createElement('div');
+  tweetPopUpContainerHeader.classList.add('tweetPopUpContainerHeader');
+  const tweetPopUpContainerFooter = document.createElement('div');
+  tweetPopUpContainerFooter.classList.add('tweetPopUpContainerFooter');
+  const tweetPopUpContainerSidebar = document.createElement('div');
+  tweetPopUpContainerSidebar.classList.add('tweetPopUpContainerSidebar');
+  const tweetPopUpContainerContent = document.createElement('div');
+  tweetPopUpContainerContent.classList.add('tweetPopUpContainerContent');
   const tweetPopUpOverlay = document.createElement('div');
   tweetPopUpOverlay.classList.add('overlay');
   const tweetX = document.createElement('img');
   tweetX.classList.add('tweetX');
   tweetX.src = '../src/assets/x.png';
-  tweetPopUpContainer.append(tweetX);
 
   tweet.addEventListener('click', () => {
     mainContainer.append(tweetPopUpOverlay);
