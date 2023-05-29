@@ -199,6 +199,10 @@ function createHomePage() {
   const tweetX = document.createElement('img');
   tweetX.classList.add('tweetX');
   tweetX.src = '../src/assets/x.png';
+  tweetPopUpContainer.append(tweetPopUpContainerHeader);
+  tweetPopUpContainer.append(tweetPopUpContainerFooter);
+  tweetPopUpContainer.append(tweetPopUpContainerSidebar);
+  tweetPopUpContainer.append(tweetPopUpContainerContent);
 
   tweet.addEventListener('click', () => {
     mainContainer.append(tweetPopUpOverlay);
