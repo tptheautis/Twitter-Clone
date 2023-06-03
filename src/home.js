@@ -1,3 +1,5 @@
+import { get } from "lodash";
+
 function createHomePage() {
   // Base layout
   const content = document.getElementById('content');
@@ -192,17 +194,29 @@ function createHomePage() {
   tweetPopUpContainerFooter.classList.add('tweetPopUpContainerFooter');
   const tweetPopUpContainerSidebar = document.createElement('div');
   tweetPopUpContainerSidebar.classList.add('tweetPopUpContainerSidebar');
-  const tweetPopUpContainerContent = document.createElement('div');
+  const tweetPopUpContainerContent = document.createElement('tweetPopUpContainerContent');
   tweetPopUpContainerContent.classList.add('tweetPopUpContainerContent');
+  const tweetSomething = document.getElementById('tweetSomething');
+  const tweetPopUpContainerTweetButton = document.createElement('div');
+  tweetPopUpContainerTweetButton.classList.add('tweetPopUpContainerTweetButton');
+  const tweetPopUpContainerTweetButtonText = document.createTextNode('Tweet');
   const tweetPopUpOverlay = document.createElement('div');
   tweetPopUpOverlay.classList.add('overlay');
   const tweetX = document.createElement('img');
   tweetX.classList.add('tweetX');
   tweetX.src = '../src/assets/x.png';
+  const mediaIcon = document.createElement('img');
+  mediaIcon.classList.add('mediaIcon');
+  mediaIcon.src = '../src/assets/mediaIcon.png';
   tweetPopUpContainer.append(tweetPopUpContainerHeader);
   tweetPopUpContainer.append(tweetPopUpContainerFooter);
   tweetPopUpContainer.append(tweetPopUpContainerSidebar);
   tweetPopUpContainer.append(tweetPopUpContainerContent);
+  tweetPopUpContainerContent.append(tweetSomething);
+  tweetPopUpContainerSidebar.append(tweetX);
+  tweetPopUpContainerFooter.append(mediaIcon);
+  tweetPopUpContainerFooter.append(tweetPopUpContainerTweetButton);
+  tweetPopUpContainerTweetButton.append(tweetPopUpContainerTweetButtonText);
 
   tweet.addEventListener('click', () => {
     mainContainer.append(tweetPopUpOverlay);
@@ -230,6 +244,8 @@ function createHomePage() {
       blueUnderline1.style.backgroundColor = '#e1e8ed';
     });
   });
+
+  // Tweet Functionality
 
   // Right Sidebar
   const whoToFollowTextContainer = document.createElement('div');

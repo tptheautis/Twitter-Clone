@@ -84,7 +84,7 @@ body {
   padding-bottom: 1.5rem;
 }
 
-.tweet:hover {
+.tweet:hover, .tweetPopUpContainerTweetButton:hover {
   filter: brightness(90%);
 }
 
@@ -108,7 +108,6 @@ body {
   height: 30rem;
   background-color: white;
   border-radius: 30px;
-  border: red solid 1px;
 }
 
 .tweetPopUpContainerHeader {
@@ -121,10 +120,16 @@ body {
 
 .tweetPopUpContainerFooter {
   display: grid;
+  display: flex;
+  flex-direction: row;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 4;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.2rem 1.6rem;
+  border-top: #e1e8ed 1px solid;
 }
 
 .tweetPopUpContainerSidebar {
@@ -137,10 +142,41 @@ body {
 
 .tweetPopUpContainerContent {
   display: grid;
+  font-size: 2rem;
+  font-weight: 400;
+  font-stretch: 100%;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+}
+
+#tweetSomething {
+  display: block;
+  width: 55rem;
+  height: 100%;
+  font: 2rem;
+}
+
+textarea {
+  display: flex;
+  width: 100%;
+  min-height: 20rem;
+}
+
+.tweetPopUpContainerTweetButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #1DA1F2;
+  font-size: 1.5rem;
+  font-weight: 900;
+  width: 10rem;
+  height: 3.6rem;
+  border-radius: 30px;
+  transition: all 0.2s;
 }
 
 /*Middle*/
