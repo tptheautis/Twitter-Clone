@@ -218,6 +218,9 @@ function createHomePage() {
   tweetPopUpContainerFooter.append(tweetPopUpContainerTweetButton);
   tweetPopUpContainerTweetButton.append(tweetPopUpContainerTweetButtonText);
 
+  const myTweetContainer = document.createElement('div');
+  myTweetContainer.classList.add('myTweetContainer');
+
   tweet.addEventListener('click', () => {
     mainContainer.append(tweetPopUpOverlay);
     mainContainer.append(tweetPopUpContainer);
@@ -226,6 +229,14 @@ function createHomePage() {
   tweetX.addEventListener('click', () => {
     mainContainer.removeChild(tweetPopUpOverlay);
     mainContainer.removeChild(tweetPopUpContainer);
+  });
+  tweetPopUpContainerTweetButton.addEventListener('click', () => {
+    const tweetSomethingText = tweetSomething.textContent;
+    mainContainer.removeChild(tweetPopUpContainer);
+    mainContainer.removeChild(tweetPopUpOverlay);
+    column2.append(myTweetContainer);
+    myTweetContainer.append(tweetSomethingText);
+    console.log(tweetSomethingText);
   });
 
   // Blue Underline animation
