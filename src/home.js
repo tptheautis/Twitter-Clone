@@ -1,5 +1,3 @@
-import { get } from "lodash";
-
 function createHomePage() {
   // Base layout
   const content = document.getElementById('content');
@@ -196,7 +194,7 @@ function createHomePage() {
   tweetPopUpContainerSidebar.classList.add('tweetPopUpContainerSidebar');
   const tweetPopUpContainerContent = document.createElement('tweetPopUpContainerContent');
   tweetPopUpContainerContent.classList.add('tweetPopUpContainerContent');
-  const tweetSomething = document.getElementById('tweetSomething');
+  const myTweetText = document.getElementById('myTweetText');
   const tweetPopUpContainerTweetButton = document.createElement('div');
   tweetPopUpContainerTweetButton.classList.add('tweetPopUpContainerTweetButton');
   const tweetPopUpContainerTweetButtonText = document.createTextNode('Tweet');
@@ -208,36 +206,53 @@ function createHomePage() {
   const mediaIcon = document.createElement('img');
   mediaIcon.classList.add('mediaIcon');
   mediaIcon.src = '../src/assets/mediaIcon.png';
+  const mediaIconContainer = document.createElement('div');
+  mediaIconContainer.classList.add('mediaIconContainer');
+
   tweetPopUpContainer.append(tweetPopUpContainerHeader);
   tweetPopUpContainer.append(tweetPopUpContainerFooter);
   tweetPopUpContainer.append(tweetPopUpContainerSidebar);
   tweetPopUpContainer.append(tweetPopUpContainerContent);
-  tweetPopUpContainerContent.append(tweetSomething);
+  tweetPopUpContainerContent.append(myTweetText);
   tweetPopUpContainerSidebar.append(tweetX);
-  tweetPopUpContainerFooter.append(mediaIcon);
+  tweetPopUpContainerFooter.append(mediaIconContainer);
+  mediaIconContainer.append(mediaIcon);
+
   tweetPopUpContainerFooter.append(tweetPopUpContainerTweetButton);
   tweetPopUpContainerTweetButton.append(tweetPopUpContainerTweetButtonText);
 
   const myTweetContainer = document.createElement('div');
   myTweetContainer.classList.add('myTweetContainer');
+  const myTweetContainerHeader = document.createElement('div');
+  myTweetContainerHeader.classList.add('myTweetContainerHeader');
+  const myTweetContainerFooter = document.createElement('div');
+  myTweetContainerFooter.classList.add('myTweetContainerFooter');
+  const myTweetContainerContent = document.createElement('div');
+  myTweetContainerContent.classList.add('myTweetContainerContent');
+  const myTweetContainerSidebar = document.createElement('div');
+  myTweetContainerSidebar.classList.add('myTweetContainerSidebar');
+  myTweetContainer.append(myTweetContainerHeader);
+  myTweetContainer.append(myTweetContainerFooter);
+  myTweetContainer.append(myTweetContainerContent);
+  myTweetContainer.append(myTweetContainerSidebar);
 
+  // My Tweet Pop-Up
   tweet.addEventListener('click', () => {
     mainContainer.append(tweetPopUpOverlay);
     mainContainer.append(tweetPopUpContainer);
-    console.log('working');
   });
   tweetX.addEventListener('click', () => {
     mainContainer.removeChild(tweetPopUpOverlay);
     mainContainer.removeChild(tweetPopUpContainer);
   });
   tweetPopUpContainerTweetButton.addEventListener('click', () => {
-    const tweetSomethingText = tweetSomething.textContent;
     mainContainer.removeChild(tweetPopUpContainer);
     mainContainer.removeChild(tweetPopUpOverlay);
     column2.append(myTweetContainer);
-    myTweetContainer.append(tweetSomethingText);
-    console.log(tweetSomethingText);
+    myTweetContainerContent.append(myTweetText.value);
+    console.log(myTweetText.value);
   });
+  // Tweet Image
 
   // Blue Underline animation
   forYouContainer.addEventListener('click', () => {

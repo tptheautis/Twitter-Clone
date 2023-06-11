@@ -232,10 +232,75 @@ textarea {
 
 .myTweetContainer {
   display: flex;
+  display: grid;
+  font-size: 1.5rem;
+  grid-template-columns: [line1] 5rem [line2] 1fr [line3];
+  grid-template-rows: [line1] 2rem [line2] 1fr [line3] 3rem [line4];
   color: black;
   width: 100%;
   min-height: 10rem;
-  border: 1px red solid;
+  border: 1px #F5F8FA solid;
+}
+
+.myTweetContainerHeader {
+  display: flex;
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.myTweetContainerFooter {
+  display: flex;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.myTweetContainerSidebar {
+  display: flex;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.myTweetContainerContent {
+  display: flex;
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.mediaIconContainer {
+  display: flex;
+  width: 15rem;
+  height: 1rem;
+}
+
+#tweetImageInput {
+  width: 5px;
+  height: 100%;
+  border: 1px solid red;
+}
+
+#displayImage {
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  border: solid 1px red;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
 }
 
 /*Right*/
